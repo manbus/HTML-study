@@ -1,77 +1,551 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>京东商城</title>
-    <style>
-     * {
-       margin: 0px;
-       padding: 0px;
-     }
-     a {
-       text-decoration: none;
-     }
-     ul li {
-       list-style: none;
-     }
-     .clearfix::after {
-       visibility: hidden;
-       clear: both;
-       display: block;
-       content: ".";
-       height: 0;
-     }
 
-     .clearfix {
-       *zoom: 1;
-     }
-     .w {
-       width: 1190px;
-       margin: 0 auto;
-     }
-     .top-nav {
-       height: 30px;
-       background: #e3e4e5;
-       color: #666;
-       line-height: 30px;
-       font-size: 12px;
-     }
-     .top-nav-mid {
-       height: 30px;
-       background: lightyellow;
-     }
-     .posi {
-       margin-left: 200px;
-       height: 30px;
-       float: left;
-       /*line-height: 30px;*/
-     }
-     .posi img {
-       margin-top: 5px;
-       float: left;
-     }
-     .posi div {
-       float: left;
-     }
-     .top-nav-mid ul li {
-       width: 77px;
-       background: lightblue;
-       float: right;
-     }
-    </style>
-  </head>
-  <body>
-    <div class="top-nav">
-      <div class="top-nav-mid w">
-        <div class="posi">
-          <img src="./jd/posi.png" alt="">
-          <div>北京</div>
-        </div>
+<head>
+  <meta charset="utf-8">
+  <title>京东商城</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    ul li {
+      list-style: none;
+    }
+
+    .clearfix::after {
+      visibility: hidden;
+      clear: both;
+      display: block;
+      content: ".";
+      height: 0;
+    }
+
+    .clearfix {
+      *zoom: 1;
+    }
+
+    .w {
+      width: 1190px;
+      margin: 0 auto;
+    }
+
+    .top-nav {
+      height: 30px;
+      background: #e3e4e5;
+      color: #666;
+      line-height: 30px;
+      font-size: 12px;
+    }
+
+    .top-nav-mid {
+      height: 30px;
+      /*background: lightyellow;*/
+      /*position: relative;*/
+    }
+
+    .posi {
+      margin-left: 10px;
+      height: 30px;
+      float: left;
+      /*line-height: 30px;*/
+    }
+
+    .posi img {
+      margin-top: 5px;
+      float: left;
+    }
+
+    .posi div {
+      float: left;
+    }
+
+    .top-nav-mid ul li {
+      width: 67px;
+      /*background: lightblue;*/
+      float: right;
+      text-align: center;
+    }
+
+    .top-nav-mid ul li a {
+      color: #666;
+    }
+
+    .top-nav-mid ul li a:hover {
+      color: #c81623;
+    }
+
+    .top-nav-mid ul li.jiange {
+      /*position: absolute;*/
+      /*top: 50%;*/
+      margin: 9px 5px 0px 5px;
+      height: 12px;
+      width: 1px;
+      background: #666;
+      float: right;
+    }
+
+    .top-nav-mid ul li a.sgin {
+      color: #f10215;
+    }
+
+    .ser-box {
+      height: 140px;
+      /*background: lightgreen;*/
+    }
+
+    .logo {
+      height: 170px;
+      width: 190px;
+      background: white url("./jd/logo.png");
+      /*position: relative;*/
+      /*top: -30px;*/
+      float: left;
+    }
+
+    .ser {
+      width: 550px;
+      height: 60px;
+      /*background: blue;*/
+      margin: 25px 0px 0px 130px;
+      float: left;
+    }
+
+    .ser input {
+      width: 488px;
+      height: 33px;
+      border: 1px #f10215 solid;
+      float: left;
+      line-height: 28px;
+      font-size: 14px;
+      color: #666;
+      padding-left: 10px;
+    }
+
+    .ser input.sub {
+      width: 50px;
+      height: 35px;
+      background: #f10215 url("./jd/ser.png") center center no-repeat;
+      float: left;
+    }
+
+    .ser-info {
+      width: 550px;
+      height: 25px;
+      /*background: yellow;*/
+      float: left;
+      line-height: 25px;
+      font-size: 12px;
+    }
+
+    .ser-info ul li {
+      margin-right: 10px;
+      float: left;
+    }
+
+    .ser-info ul li a {
+      color: #999;
+    }
+
+    .ser-info ul li a:hover {
+      color: #f10215;
+    }
+
+    .buy-car {
+      width: 143px;
+      height: 27px;
+      margin: 25px 0px 0px 30px;
+      padding: 6px 0px 0px 45px;
+      border: 1px solid #f10215;
+      float: left;
+      line-height: 20px;
+      font-size: 12px;
+      color: #f10215;
+    }
+
+    .buy {
+      width: 20px;
+      height: 20px;
+      background: url("./jd/buy.png");
+      float: left;
+    }
+
+    .buy-car div {
+      margin-right: 15px;
+      float: left;
+    }
+
+    .buy-car .buy-num {
+      width: 15px;
+      height: 15px;
+      border-radius: 15px;
+      background: #f10215;
+      color: white;
+      text-align: center;
+      line-height: 15px;
+      position: relative;
+      top: -5px;
+      right: 20px;
+    }
+
+    .twoma {
+      width: 60px;
+      height: 60px;
+      float: right;
+      background: url("./jd/2ma.png")
+    }
+
+    .nav {
+      width: 1000px;
+      height: 40px;
+      /*background: lightpink;*/
+      margin-top: 15px;
+      float: left;
+    }
+
+    .nav ul li {
+      font-size: 16px;
+      font-weight: bolder;
+      margin-left: 30px;
+      float: left;
+      line-height: 40px;
+    }
+
+    .nav ul li a {
+      color: #999;
+    }
+
+    .ad-2 {
+      width: 190px;
+      height: 40px;
+      float: right;
+      background: url("./jd/ad-2.jpg")
+    }
+
+    .mid {
+      height: 480px;
+      background: lightyellow;
+    }
+
+    .list {
+      width: 190px;
+      height: 448px;
+      background: #6e6568;
+      padding-bottom: 16px;
+      padding-top: 16px;
+      float: left;
+    }
+
+    .list ul {
+      margin-left: 10px;
+    }
+
+    .list ul li {
+      height: 28px;
+      line-height: 28px;
+      font-size: 14px;
+      float: left;
+      margin-right: 5px;
+      color: white;
+    }
+
+    .list ul li a {
+      color: white;
+    }
+
+    .list ul li a:hover {
+      color: #c81623;
+    }
+
+    .ad {
+      height: 480px;
+      width: 790px;
+      float: left;
+      margin-left: 10px;
+    }
+
+    .ad-1 {
+      width: 790px;
+      height: 340px;
+      background: url("./jd/ad-1.jpg");
+    }
+
+    .ad-1 ul {
+      width: 166px;
+      height: 20px;
+      background: hsla(0, 0%, 100%, .3);
+      /*margin: 300px 0px 0px 300px;*/
+      position: relative;
+      top: 300px;
+      left: 300px;
+      border-radius: 20px;
+      padding: 0px 8px 0px 8px;
+    }
+
+    .ad-1 ul li {
+      width: 12px;
+      height: 12px;
+      border-radius: 12px;
+      background: white;
+      float: left;
+      margin: 4px 10px 0px 0px;
+    }
+
+    .ad-1 ul li:hover {
+      background: red;
+    }
+
+    .ad-1 ul li.nom {
+      margin-right: 0px;
+    }
+
+    .ad-3 {
+      width: 390px;
+      height: 130px;
+      background: blue;
+      float: left;
+      margin-top: 10px;
+      /*margin-right: 10px;*/
+    }
+
+    .ad-3 img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .col {
+      width: 190px;
+      height: 480px;
+      background: lightblue;
+      float: right;
+    }
+    .hi {
+      width: 160px;
+      height: 115px;
+      padding: 1px 15px 0px 15px;
+      background: lightgreen;
+    }
+    .user-pic{
+      width: 50px;
+      height: 50px;
+      background: lightpink url("./jd/sprite2.png") -70px 0px;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-nav">
+    <div class="top-nav-mid w">
+      <div class="logo"></div>
+      <div class="posi">
+        <img src="./jd/posi.png" alt="">
+        <div>北京</div>
+      </div>
+      <ul>
+        <li><a href="#">手机京东</a></li>
+        <li class="jiange"></li>
+        <li><a href="#">网站导航</a></li>
+        <li class="jiange"></li>
+        <li><a href="#">客户服务</a></li>
+        <li class="jiange"></li>
+        <li><a href="#">企业采购</a></li>
+        <li class="jiange"></li>
+        <li><a href="#">京东会员</a></li>
+        <li class="jiange"></li>
+        <li><a href="#">我的京东</a></li>
+        <li class="jiange"></li>
+        <li><a href="#">我的订单</a></li>
+        <li class="jiange"></li>
+        <li><a class="sgin" href="#">免费注册</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ser-box w">
+
+    <div class="ser">
+      <input type="text" value="京东限量秒杀">
+      <input type="submit" class="sub" value="">
+      <div class="ser-info">
         <ul>
-          <li>手机京东</li>
+          <li><a style="color:#f10215;" href="#">1元秒电脑</a></li>
+          <li><a href="#">农资周年庆</a></li>
+          <li><a href="#">七夕钜惠</a></li>
+          <li><a href="#">低至5折</a></li>
+          <li><a href="#">保湿护手霜</a></li>
+          <li><a href="#">洗碗机</a></li>
+          <li><a href="#">夏日饮品</a></li>
+          <li><a href="#">开关面板</a></li>
         </ul>
+
       </div>
     </div>
+    <div class="buy-car">
+      <div class="buy"></div>
+      <div>我的购物车</div>
+      <div class="buy-num">0</div>
+    </div>
+    <div class="twoma"></div>
+    <div class="nav">
+      <ul>
+        <li><a href="#">秒杀</a></li>
+        <li><a href="#">优惠券</a></li>
+        <li><a href="#">闪购</a></li>
+        <li><a href="#">拍卖</a></li>
+        <li><a href="#">|</a></li>
+        <li><a href="#">服装城</a></li>
+        <li><a href="#">京东超市</a></li>
+        <li><a href="#">生鲜</a></li>
+        <li><a href="#">全球购</a></li>
+        <li><a href="#">|</a></li>
+        <li><a href="#">京东金融</a></li>
+      </ul>
+      <div class="ad-2"></div>
+    </div>
+  </div>
+  <div class="mid w">
+    <div class="list">
+      <ul class="clearfix">
+        <li><a href="#">家用电器</a></li>
+      </ul>
+      <ul class="clearfix">
+        <li><a href="#">手机 </a></li>
+        <li>/</li>
+        <li><a href="#">运营商 </a></li>
+        <li>/</li>
+        <li><a href="#">数码</a></li>
+      </ul>
+      <ul class="clearfix">
+        <li><a href="#">电脑</a></li>
+        <li>/</li>
+        <li><a href="#">办公</a></li>
+      </ul>
+      <ul class="clearfix">
+        <li><a href="#">家居</a></li>
+        <li>/</li>
+        <li><a href="#">家具</a></li>
+        <li>/</li>
+        <li><a href="#">家装</a></li>
+        <li>/</li>
+        <li><a href="#">厨具</a></li>
+      </ul>
+      <ul class="clearfix">
+        <li><a href="#">男装</a></li>
+        <li>/</li>
+        <li><a href="#">女装</a></li>
+        <li>/</li>
+        <li><a href="#">童装</a></li>
+        <li>/</li>
+        <li><a href="#">内衣</a></li>
+      </ul>
+      <ul class="clearfix">
+        <li><a href="#">美妆个护</a></li>
+        <li>/</li>
+        <li><a href="#">宠物</a></li>
+      </ul>
+      <ul class="clearfix">
+        <li><a href="#">女鞋</a></li>
+        <li>/</li>
+        <li><a href="#">箱包</a></li>
+        <li>/</li>
+        <li><a href="#">钟表</a></li>
+        <li>/</li>
+        <li><a href="#">珠宝</a></li>
+      </ul>
+      <ul class="clearfix">
+        <li><a href="#">男鞋</a></li>
+        <li>/</li>
+        <li><a href="#">运动</a></li>
+        <li>/</li>
+        <li><a href="#">户外</a></li>
+      </ul>
+      <ul class="clearfix">
+        <li><a href="#">汽车</a></li>
+        <li>/</li>
+        <li><a href="#">汽车用品</a></li>
+      </ul>
+      <ul class="clearfix">
+        <li><a href="#">母婴</a></li>
+        <li>/</li>
+        <li><a href="#">玩具乐器</a></li>
+      </ul>
+      <ul class="clearfix">
+        <li><a href="#">食品</a></li>
+        <li>/</li>
+        <li><a href="#">酒类</a></li>
+        <li>/</li>
+        <li><a href="#">生鲜</a></li>
+        <li>/</li>
+        <li><a href="#">特产</a></li>
+      </ul>
+      <ul class="clearfix">
+        <li><a href="#">礼品鲜花</a></li>
+        <li>/</li>
+        <li><a href="#">农资绿植</a></li>
+      </ul>
+      <ul class="clearfix">
+        <li><a href="#">医药保健</a></li>
+        <li>/</li>
+        <li><a href="#">计生情趣</a></li>
+      </ul>
+      <ul class="clearfix">
+        <li><a href="#">图像</a></li>
+        <li>/</li>
+        <li><a href="#">音像</a></li>
+        <li>/</li>
+        <li><a href="#">电子书</a></li>
+      </ul>
+      <ul class="clearfix">
+        <li><a href="#">机票</a></li>
+        <li>/</li>
+        <li><a href="#">酒店</a></li>
+        <li>/</li>
+        <li><a href="#">旅游</a></li>
+        <li>/</li>
+        <li><a href="#">生活</a></li>
+      </ul>
+      <ul class="clearfix">
+        <li><a href="#">理财</a></li>
+        <li>/</li>
+        <li><a href="#">众筹</a></li>
+        <li>/</li>
+        <li><a href="#">白条</a></li>
+        <li>/</li>
+        <li><a href="#">保险</a></li>
+      </ul>
+    </div>
+    <div class="ad">
+      <div class="ad-1 ">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li class="nom"></li>
+        </ul>
+      </div>
+      <div class="ad-3">
+        <img src="./jd/ad-3.jpg" alt="">
+      </div>
+      <div style="margin-left:10px;" class="ad-3">
+        <img src="./jd/ad-4.jpg" alt="">
+      </div>
+    </div>
+    <div class="col">
+      <div class="hi">
+        <div class="user-pic"></div>
+      </div>
+    </div>
+  </div>
 
-  </body>
+</body>
+
 </html>
