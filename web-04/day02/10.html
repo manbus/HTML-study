@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>文本相关属性</title>
+    <style>
+    .one {
+      font-size : 20px;
+    }
+    .one span{
+      /*1em = 当前字体大小（可以是继承过来的）*/
+      /*font-size: 2em;*/
+
+      /*unicode编码中的u字符要删掉*/
+      /*font-family:"\5b8b\4f53";*/
+
+      /*font-weight:bolder;*/
+      /*font-weight: 900;*/
+
+      /*斜体*/
+      /*font-style: italic;*/
+
+      /*综合设置*/
+      /*必须保留font-size和font-family属性，否则font属性将不起作用*/
+      font: 40px "黑体";
+
+      /*color: red;*/
+
+      /*rgb，三色，16进制*/
+      /*color: #ffcea8;*/
+      /*rgb
+      第一个参数:red
+      第二个参数:green
+      第三个参数:blue
+      */
+      color: rgb(215,116,116);
+
+    }
+    </style>
+  </head>
+  <body>
+    <p class="one">
+      这是一个P标签<br>
+      这是一个P标签
+      <span>
+        span元素
+      </span>
+    </p>
+
+  </body>
+</html>

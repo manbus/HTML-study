@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>表格</title>
+  </head>
+  <body>
+    <table border="1" cellpadding="20" cellspacing="0">
+      <caption>
+        <h1>学生信息</h1>
+      </caption>
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>age</th>
+          <th>gender</th>
+        </tr>
+      </thead>
+      <!-- tr 只能嵌套td，th标签。不能嵌套其他 -->
+      <tbody>
+        <tr align="center">
+          <td>张三</td>
+          <td>20</td>
+          <td>male</td>
+        </tr>
+
+        <tr align="center">
+          <td>张三</td>
+          <td>20</td>
+          <td>male</td>
+        </tr>
+        <!-- td就是容器，什么群标签都可以嵌套 -->
+        <tr align="center">
+          <td>张三</td>
+          <td>20</td>
+          <td><p>爱上了反馈那是；非</p></td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td>foot1</td>
+          <td>foot2</td>
+          <td><table border="1px" cellspacing="0">
+            <tr>
+              <td>1111</td>
+            </tr>
+            <tr>
+              <td>2222</td>
+            </tr>
+          </table></td>
+        </tr>
+      </tfoot>
+    </table>
+
+  </body>
+</html>

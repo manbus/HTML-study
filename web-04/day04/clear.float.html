@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>nav导航</title>
+    <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    ul li {
+      /*去掉项目符号*/
+      list-style: none;
+    }
+
+    a{
+      text-decoration: none;
+      color: gray;
+    }
+    .nav {
+      width: 1000px;
+      margin: 50px auto;
+      /*
+      1.第一种解决方法
+      给父元素设置高度
+      */
+      /*height: 30px;*/
+      /*3.第三种方法，设置overflow:hidden;
+      overflow: hidden;*/
+    }
+    .nav li {
+      float: left;
+      width: 80px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      background: rgba(101, 135, 101, 0.44);
+    }
+    /*
+    4.终极清除浮动的方法
+    使用伪元素
+    */
+    .clearfix::after {
+      visibility: hidden;
+      clear: both;
+      display: block;
+      content: ".";
+      height: 0;
+    }
+
+    .clearfix {
+      *zoom: 1;
+    }
+    </style>
+  </head>
+  <body>
+    <ul class="nav clearfix">
+      <li><a href="#">导航1</a></li>
+      <li><a href="#">导航1</a></li>
+      <li><a href="#">导航1</a></li>
+      <li><a href="#">导航1</a></li>
+      <li><a href="#">导航1</a></li>
+    </ul>
+    <!-- 第2中清除浮动的方式，添加空元素，并且指定clear:both -->
+    <!-- <p style="clear:both;"></p> -->
+    <p>
+      大事发生的法律呢；阿斯顿发送到
+      大事发生的法律呢；阿斯顿发送到
+      大事发生的法律呢；阿斯顿发送到
+      大事发生的法律呢；阿斯顿发送到
+      大事发生的法律呢；阿斯顿发送到
+      大事发生的法律呢；阿斯顿发送到
+    </p>
+
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>position 定位 absolute</title>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .f {
+      width: 300px;
+      height: 200px;
+      background: blue;
+
+      position: relative;
+      top: 100px;
+      left: 10%;
+    }
+    /*
+    只要祖先元素中有任何一个设置过 relative,absolute,fixed其中一个值的。
+    那么该元素绝对定位时，是相对于最近设置过定位的元素。
+    */
+    /*
+    子绝父相
+    父元素不要移动位置，relative
+    */
+    .s {
+      width: 200px;
+      height: 100px;
+      background: green;
+      /*
+      此时虽然有父元素 f,但是若f并没有设置过任何定位的属性，仍然相对于body定位
+      */
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+
+    </style>
+  </head>
+  <body>
+    <div class="f"><div class="s"></div></div>
+    <p>啥地方那是；懒得看父母那；而快乐飞哪儿舒服哈速配of奶萨；冷风；扫诶愤怒</p>
+
+  </body>
+</html>
