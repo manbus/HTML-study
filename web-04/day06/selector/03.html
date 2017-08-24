@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>属性选择器，和CSS是一致的</title>
+  </head>
+  <body>
+    <div name="one">1111</div>
+    <div name="one">1111</div>
+    <div name="one">1111</div>
+
+    <div name="on-1">1111</div>
+    <div name="on-2">1111</div>
+    <div name="onno">1111</div>
+
+    <div>1111</div>
+
+    <div data="hello">1111</div>
+    <div data="worldhello">1111</div>
+    <div data="helloworld">1111</div>
+
+    <script src="../jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    /*
+    单引号可以直接包含双引号，但是不能直接包含单引号
+    双引号可以直接包含单引号，但是不能直接包含双引号
+    */
+
+    //属性选择器
+    $("[name=one]").css("color","red");
+
+    //选择指定属性值等于给定字符串或以该字符串为前缀（该字符串后跟一个连字符“-” ）的元素
+    $("[name|=on]").css("font-size","50px");
+    //属性值以hello结尾
+    $("[data$=hello]").css("font-size","50px");
+    //属性值以hello开头
+    $("[data^=hello]").css("color","pink");
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>页面层级 z-index 重要内容</title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      ul li {
+        list-style: none;
+      }
+
+      .one {
+        height: 90px;
+        width: 500px;
+        margin: 50px auto;
+      }
+
+      .one li {
+        width: 80px;
+        height: 80px;
+        border: 3px solid green;
+        float: left;
+
+        /*向左偏移,让中间的边框重叠*/
+        margin-left: -3px;
+      }
+      .one li:hover{
+        border-color: purple;
+        /*
+        z-index 必须和 static以外的其他定位配合使用，否则无效
+        */
+        position: relative;
+        z-index: 2;
+      }
+      .two,.three {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .two {
+        background: yellow;
+        z-index: 1;
+
+      }
+      .three {
+        background: blue;
+      }
+
+      .four {
+        height: 200px;
+        border: 1px solid red;
+        position: relative;
+        /*background: yellow;*/
+        /*z-index: 2;*/
+      }
+      .four_s {
+        /*
+        默认和父元素层级一样！！！
+        但是可以自己设置z-index!!
+        */
+        width: 100px;
+        height: 100px;
+        background: purple;
+        position: absolute;
+        /*z-index: 1;*/
+      }
+      /*.four_s2 {
+        width: 50px;
+        height: 50px;
+        background: blue;
+        position: absolute;
+      }*/
+
+      .five {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 191px;
+        left: 1px;
+        background: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="one">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+
+    <div class="two"></div>
+    <div class="three"></div>
+
+    <div class="four">
+      <div class="four_s"></div>
+      <div class="four_s2"></div>
+    </div>
+    <div class="five"></div>
+  </body>
+</html>
