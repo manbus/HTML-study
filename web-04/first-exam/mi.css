@@ -1,0 +1,497 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.clearfix::after {
+  visibility: hidden;
+  clear: both;
+  display: block;
+  content: ".";
+  height: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+.w {
+  width: 1226px;
+  margin: 0 auto;
+}
+.topbar {
+  height: 40px;
+  font-size: 12px;
+  color: #b0b0b0;
+  background: #333;
+}
+.topbar-w {
+  height: 40px;
+}
+.topbar-nav {
+  float: left;
+  /*background: lightblue;*/
+  height: 40px;
+}
+.topbar-nav ul li {
+  float: left;
+  height: 40px;
+  margin-right: 6px;
+  font-size: 12px;
+  color: #b0b0b0;
+  line-height: 40px;
+}
+.topbar-nav ul li a {
+  color: #b0b0b0;
+}
+.topbar-nav ul li a:hover {
+  color: #fff;
+}
+.topbar-cart {
+  position: relative;
+  float: right;
+  width: 120px;
+  margin-left: 15px;
+  background: #424242;
+  height: 40px;
+  color: #b0b0b0;
+  line-height: 40px;
+  text-align: center;
+}
+.cart-xuangou {
+  width: 316px;
+  height: 98px;
+  position: absolute;
+  background: #fff;
+  top: 40px;
+  left: -196px;
+  font-size: 12px;
+  color: gray;
+  text-align: center;
+  line-height: 98px;
+  box-shadow: 0px 0px 2px gray;
+  visibility: hidden;
+  z-index: 1;
+}
+.topbar-info {
+  float: right;
+  /*background: lightblue;*/
+  height: 40px;
+}
+.topbar-info ul li {
+  float: right;
+  height: 40px;
+  margin-left: 6px;
+  font-size: 12px;
+  color: #b0b0b0;
+  line-height: 40px;
+}
+.topbar-info ul li a {
+  color: #b0b0b0;
+}
+.topbar-info ul li a:hover {
+  color: #fff;
+}
+.head {
+  height: 100px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  margin: 25px 0px;
+  position: absolute;
+  display: inline-block;
+  float: left;
+  background: url("./mi/mi-logo.png") #ff6700;
+}
+.search-box {
+  width: 296px;
+  height: 50px;
+  margin-top: 25px;
+  float: right;
+  position: relative;
+}
+.search-btn {
+  width: 50px;
+  height: 48px;
+  float: right;
+  cursor: pointer;
+  color: #ff6700;
+  border: 1px solid #e0e0e0;
+  font-size: 24px;
+  line-height: 50px;
+  text-align: center;
+  font-weight: bolder;
+}
+.search-btn:hover {
+  background: #ff6700;
+  color: white;
+}
+.search-input {
+  width: 233px;
+  height: 48px;
+  border: 1px solid #e0e0e0;
+  border-right: none;
+  padding-left: 10px;
+  float: right;
+  font-size: 14px;
+  line-height: 48px;
+  outline:none;
+}
+.hot-words {
+  position: absolute;
+  top:14px;
+  right: 62px;
+  height: 21px;
+  line-height: 21px;
+  font-size: 12px;
+}
+.hot-words a {
+  color: #757575;
+  background: #eee;
+  margin-right: 5px;
+  height: 18px;
+  display: inline-block;
+}
+.hot-words a:hover {
+  color: white;
+  background: #ff6700;
+}
+.search-words-box {
+  width: 243px;
+  border: 1px solid #ff6700;
+  background: white;
+  border-top: none;
+  position: absolute;
+  top: 50px;
+  z-index: 1;
+  visibility: hidden;
+}
+.search-words-box ul li {
+  height:30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 30px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.search-words-box ul li:hover{
+  background: rgb(225, 229, 230);
+}
+.search-words-box ul li p {
+  color: #b0b0b0;
+  float: right;
+}
+.head-nav {
+  width: 830px;
+  height: 100px;
+  position: relative;
+  float: right;
+  padding-right: 20px;
+}
+.head-nav-list {
+  height: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 16px;
+  float: right;
+}
+.head-nav-list  a {
+  color: black;
+}
+.head-nav-list a:hover {
+  color: #ff6700;
+}
+.navmenu {
+  border-top: 1px solid #b0b0b0;
+  background: white;
+  width: 100%;
+  height: 230px;
+  position: absolute;
+  top: 140px;
+  box-shadow: 0px 2px 3px gray;
+  z-index: 1;
+}
+.xmsj {
+  visibility: hidden;
+}
+.hm {
+  visibility: hidden;
+}
+.pb {
+  visibility: hidden;
+}
+.ds {
+  visibility: hidden;
+}
+.hz {
+  visibility: hidden;
+}
+.lyq {
+  visibility: hidden;
+}
+.znyj {
+  visibility: hidden;
+}
+.fw {
+  visibility: hidden;
+}
+.sq {
+  visibility: hidden;
+}
+.navmenu-cen {
+  height: 230px;
+}
+.navmenu-cen ul li {
+  width: 179px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 35px;
+  float: left;
+  position: relative;
+}
+.navmenu-cen ul li img {
+  width: 160px;
+  height: 110px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.navmenu-cen ul li div {
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  text-align: center;
+}
+.navmenu-cen ul li div a {
+  color: black;
+}
+.navmenu-cen ul li p {
+  color: #ff6700;
+  line-height: 20px;
+  text-align: center;
+  font-size: 12px;
+}
+.navmenu-top-info {
+  border: 1px solid #ff6700;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  text-align: center;
+  padding: 0px 10px 0px 10px;
+  position: absolute;
+  top: 0px;
+  left: 32%;
+  /*margin-left: 100px;*/
+  color: #ff6700;
+
+}
+#cell {
+  width: 1px;
+  height: 110px;
+  margin-top: 35px;
+  background: #e0e0e0;
+  padding: 0;
+}
+.ad {
+  height: 460px;
+  width: 1226px;
+  height: 460px;
+  background: url("./mi/ad.jpg");
+  position: relative;
+}
+.nav {
+  width: 234px;
+  height: 420px;
+  padding: 20px 0px 20px 0px;
+  background: rgba(0,0,0,0.6);
+  float: left;
+}
+.nav ul li {
+  padding-left: 30px;
+  padding-right: 20px;
+  height: 42px;
+  line-height: 42px;
+  font-size: 14px;
+}
+.nav ul li a {
+  color: white;
+}
+.nav ul li:hover{
+  background: #ff6700;
+}
+.nav ul li span {
+  float:right;
+  color: #e0e0e0;
+}
+.l-jt {
+  width:41px;
+  height: 69px;
+  background: url("./mi/icon-slides.png") 82px 0px;
+  position: absolute;
+  top: 195px;
+  left: 234px;
+}
+.l-jt:hover {
+  background-position: 0px 0px;
+}
+.r-jt {
+  width: 41px;
+  height: 69px;
+  background: url("./mi/icon-slides.png") 41px 0px;
+  position: absolute;
+  top: 195px;
+  right: 0px;
+}
+.r-jt:hover {
+  background-position: 123px 0px;
+}
+.ad-2 {
+  height: 170px;
+  margin-top: 14px;
+}
+.sprite-box {
+  height: 164px;
+  width: 227px;
+  padding: 3px;
+  background: #5f5750;
+  float: left;
+}
+.sprite-box ul li {
+  width: 74px;
+  height: 81px;
+  padding: 0px 0px 0px 0px;
+  float: left;
+  text-align: center;
+}
+.sprite-box ul li div {
+  height: 24px;
+  width: 30px;
+  margin: 10px auto;
+  background: url("./mi/sprite1.png") 3px 0px;
+}
+.sprite-box ul li a {
+  width: 74px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+  line-height: 24px;
+  text-align: center;
+}
+.sprite-box ul li a:hover {
+  color: #fff;
+}
+.sprite-box ul li.line-horzontal{
+  width: 1px;
+  height: 70px;
+  margin-top: 6px;
+  background: #665e57;
+  float: left;
+  padding: 0;
+}
+.sprite-box ul li.line-vertical {
+  width: 64px;
+  height: 1px;
+  background: #665e57;
+  float: left;
+  margin: 0px 5px 0px 6px;
+}
+.ad-3 {
+  width: 316px;
+  height: 170px;
+  float: right;
+  margin-left: 15px;
+}
+.ad-3 a img {
+  width: 316px;
+  height: 170px;
+}
+.star-good {
+  height: 438px;
+  margin-top: 26px;
+}
+.box-hd {
+  height: 58px;
+}
+.box-hd h2{
+  height: 58px;
+  margin: 0;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 58px;
+  color: #333;
+  float: left;
+}
+.more {
+  width: 70px;
+  height: 25px;
+  margin: 16px 0;
+  float: right;
+}
+.more ul li{
+  width: 33px;
+  height: 23px;
+  float: right;
+  font-size: 16px;
+  color: #e0e0e0;
+  line-height: 25px;
+  text-align: center;
+  font-weight: 600;
+  border: 1px solid #b0b0b0;
+  cursor: pointer;
+}
+.more ul li:hover {
+  color: #ff6700;
+}
+.ad-4 {
+  height: 340px;
+}
+.ad-4 ul li{
+  width: 234px;
+  height: 300px;
+  padding-top: 39px;
+  border-top: 1px solid orange;
+  margin-right: 12px;
+  float: left;
+  background: #fafafa;
+}
+.ad-4 ul li.last {
+  margin: 0;
+}
+.ad-4 ul li a{
+  display: block;
+  width: 160px;
+  height: 166px;
+  margin: 0px 37px 22px 37px;
+}
+.ad-4 ul li a img {
+  width: 160px;
+  height: 166px;
+}
+.ad-4 ul li h2 {
+  margin: 0 20px 3px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+.ad-4 ul li p {
+  height: 18px;
+  margin: 0 20px 12px;
+  font-size: 12px;
+  color: #b0b0b0;
+  text-align: center;
+}
+.ad-4 ul li p.money {
+  color: #ff6709;
+  text-align: center;
+  height: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 20px;
+}

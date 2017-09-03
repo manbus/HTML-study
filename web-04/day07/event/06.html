@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script src="../jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    // keydown识别所有的
+    /*
+    $(document).keydown(function(e){
+      console.log('按下键盘' + e.which);
+    });
+    */
+    /*
+    //keypress识别字母数字按键
+    $(document).keypress(function(){
+      console.log('按下了字母或者数字按键');
+    });
+    */
+    //keyup识别弹起的按键
+    $(document).keyup(function(e){
+      console.log('按下了' + e.which);
+    });
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>table</title>
+  </head>
+  <body>
+    <script src="../jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $("body").append("<table><tr><th>Name</th><th>gender</th><th>age</th><th><button class='add' type='submit'>add</button></th></tr></table>")
+      $("table").css({
+        "width":"500px",
+        // "height":"300px",
+        "border":"1px solid red"
+      })
+
+      $("table tr th").css("border","1px solid blue");
+
+
+      var age = 18;
+      $(".add").click(function(){
+        $("table").append("<tr><td>张三</td><td>高一</td><td>" + age +"</td><td><button type='submit' class='del'>del</button></td></tr>")
+        age = age + 1;
+      });
+
+      $("tbody").on("click","[class='del']",function(){
+        var link = $(this).parents("tr");
+        console.log(link);
+        link.remove();
+        // console.log(123);
+      });
+
+      // $(document).ready(function() {
+      //   $('.del').click(function() {
+      //   var link = $(this).parents("tr");
+      //   link.remove();
+      //   console.log(123);
+      //   });
+      // });
+
+
+
+    </script>
+
+  </body>
+</html>
