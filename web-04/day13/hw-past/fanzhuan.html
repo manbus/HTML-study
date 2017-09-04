@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>翻转</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        height: 1000px;
+        background: #f6f6f6;
+        transform-style:preserve-3d; 
+      }
+      div{
+        margin: auto;
+        margin-top: 50px;
+      }
+      .one{
+        width: 300px;
+        height: 226px;
+        background: url("./pic/img2/x.jpg");
+        transition: all 1s linear;
+      }
+      .one:hover{
+        transform: rotateX(180deg);
+      }
+      .two{
+        width: 237px;
+        height: 300px;
+        background: url("./pic/img2/y.jpg");
+        transition: all 1s linear;
+      }
+      .two:hover{
+        transform: rotateY(-180deg);
+        transform-origin: left;
+      }
+      .three{
+        width: 330px;
+        height: 227px;
+        background: url("./pic/img2/z.jpg");
+        transition:all 1s linear;
+      }
+      .three:hover{
+        transform: rotateZ(360deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+  </body>
+</html>

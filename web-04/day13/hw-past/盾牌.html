@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>盾牌</title>
+      <style>
+       *{
+         margin: 0;
+         padding: 0;
+       }
+
+       ul{
+         list-style: none;
+       }
+       body{
+         background: lightgreen;
+         height: 100%;
+       }
+
+       .f{
+         width: 408px;
+         height: 482px;
+         margin: auto;
+         margin-top: 50px;
+       }
+       ul li{
+         background: black;
+         opacity: 0.5;
+         float: left;
+       }
+        .box1{
+         width: 113px;
+         height: 150px;
+         background: url(./pic/img1/shield_1_01.png) no-repeat ;
+         transform: rotate(-360deg) translate(100px , 50px);
+         transition: all 1s linear;
+       }
+       .f:hover  .box1{
+         width: 113px;
+         height: 150px;
+         background: url(./pic/img1/shield_1_01.png) no-repeat ;
+         transform: rotate(0deg) translate(0,0);
+       }
+       .box2{
+         width: 178px;
+         height: 150px;
+         background: url(./pic/img1/shield_1_02.png) no-repeat ;
+         transform: rotate(360deg) translate(-200px , -50px);
+         transition: all 1s linear;
+       }
+       .f:hover .box2{
+         transform: rotate(0deg) translate(0px , 0px);
+       }
+
+       .box3{
+         width: 117px;
+         height: 150px;
+         background: url(./pic/img1/shield_1_03.png) no-repeat ;
+         transform: rotate(-75deg) translate(400px , -150px);
+         transition: all 1s linear;
+       }
+
+       .f:hover .box3{
+        transform: rotate(0deg) translate(0px , 0px);
+       }
+       .box4{
+         width: 113px;
+         height: 178px;
+         background: url(./pic/img1/shield_1_04.png) no-repeat ;
+         transform: rotate(175deg) translate(-400px , 75px);
+         transition: all 1s linear;
+       }
+       .f:hover .box4{
+         transform: rotate(0deg) translate(0px , 0px);
+       }
+       .box5{
+         width: 178px;
+         height: 178px;
+         background: url(./pic/img1/shield_1_05.png) no-repeat ;
+         transform: rotate(-225deg) translate(150px , -55px);
+         transition: all 1s linear;
+       }
+       .f:hover .box5{
+         transform: rotate(0deg) translate(0px , 0px);
+       }
+       .box6{
+         width: 117px;
+         height: 178px;
+         background: url(./pic/img1/shield_1_06.png) no-repeat ;
+         transform: rotate(200deg) translate(100px , -155px);
+         transition: all 1s linear;
+       }
+       .f:hover .box6{
+        transform: rotate(0deg) translate(0px , 0px);
+       }
+       .box7{
+         width: 113px;
+         height: 154px;
+         background: url(./pic/img1/shield_1_07.png) no-repeat ;
+         transform: rotate(-200deg) translate(75px , -125px);
+         transition: all 1s linear;
+       }
+       /*.f:hover .box7{
+         transform: rotate(0deg) translate(0px , 0px);
+       }*/
+       .box8{
+         width: 178px;
+         height: 154px;
+         background: url(./pic/img1/shield_1_08.png) no-repeat ;
+         transform: rotate(10deg) translate(99px , 250px);
+         transition: all 1s linear;
+       }
+       /*.f:hover .box8{
+         transform: rotate(0deg) translate(0px , 0px);
+
+       }*/
+
+      .box9{
+         width: 117px;
+         height: 154px;
+         background: url(./pic/img1/shield_1_09.png) no-repeat ;
+         transform: rotate(-360deg) translate(-45px , 400px);
+         transition: all 1s linear;
+       }
+       /*.f:hover .box9{
+         transform: rotate(0deg) translate(0px , 0px);
+
+       }*/
+       .f:hover ul li{
+                  transform: rotate(0deg) translate(0px , 0px);
+       }
+      </style>
+  </head>
+  <body>
+    <div class="f">
+       <ul>
+         <li class="box1"></li>
+         <li class="box2"></li>
+         <li class="box3"></li>
+         <li class="box4"></li>
+         <li class="box5"></li>
+         <li class="box6"></li>
+         <li class="box7"></li>
+         <li class="box8"></li>
+         <li class="box9"></li>
+       </ul>
+    </div>
+  </body>
+</html>

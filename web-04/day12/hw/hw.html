@@ -243,14 +243,14 @@
       .ershiyi {
         width: 90px;
         height: 45px;
-        border-bottom: red solid 45px;
+        border-bottom: 45px solid red;
         background: green;
-        box-sizing: border-box;
         border-radius: 45px;
         margin: auto;
         position: relative;
       }
-        .ershiyi::before,.ershiyi::after{
+        .ershiyi::before,
+        .ershiyi::after{
         content: "";
         display: block;
         width: 9px;
@@ -268,6 +268,66 @@
       .ershiyi::before{
         background: green;
         border-color: red;
+        right: 0;
+      }
+      .ershier {
+        border-radius: 10px;
+        background: red;
+        position: relative;
+      }
+      .ershier-1 {
+        width: 10px;
+        height: 10px;
+        box-sizing: border-box;
+        border-right: 10px solid red;
+        border-left: 10px solid rgba(255, 255, 255, 0);
+        border-top: 10px solid rgba(255, 255, 255, 0);
+        border-bottom: 10px solid rgba(255, 255, 255, 0);
+        position: absolute;
+        top: 7px;
+        left: -15px;
+      }
+      .ershisan {
+        box-sizing: border-box;
+        border-left: 50px solid red;
+        border-top: 30px solid red;
+        border-bottom: 30px solid red;
+        border-right: none;
+        margin: auto;
+        border-radius: 0 0 30px 0 / 0 0 45px 0 ;
+      }
+      .ershisi {
+        box-sizing: border-box;
+        margin: auto;
+        border-top: 15px solid red;
+        border-bottom: 15px solid red;
+        border-right: 10px solid red;
+        border-left: 40px solid red;
+        border-radius: 25px 60px 60px 25px;
+      }
+      .ershiwu {
+        width: 75px;
+        border-radius: 15px;
+        margin: auto;
+        background: red;
+        /*position:relative;*/
+      }
+      .ershiwu-1 {
+        width: 45px;
+        height: 45px;
+        border-top: 10px solid rgba(255, 255, 255, 0);
+        border-left: 10px solid rgba(255, 255, 255, 0);
+        border-bottom: 20px solid red;
+        border-radius: 0 0 30px 0 / 0 0 45px 0;
+        box-sizing: border-box;
+        position: relative;
+        right: -45px;
+        top: -5px;
+      }
+      .ershiliu {
+        border-radius: 50%; /*border-radius:90px/45px;等价*/
+        /*百分比是宽度的百分比*/
+        border: 1px solid red;
       }
 
     </style>
@@ -355,6 +415,27 @@
     <div class="hang">
       <div class="kuai" data-brief="八卦">
         <div class="ershiyi"></div>
+      </div>
+      <div class="kuai" data-brief="消息">
+        <div class="ershier model2">
+          <div class="ershier-1"></div>
+        </div>
+      </div>
+      <div class="kuai" data-brief="乱七八糟形状">
+        <div class="ershisan model1"></div>
+      </div>
+      <div class="kuai" data-brief="子弹">
+        <div class="ershisi model2"></div>
+      </div>
+    </div>
+    <div class="hang">
+      <div class="kuai" data-brief="对话框">
+        <div class="ershiwu model2">
+          <div class="ershiwu-1"></div>
+        </div>
+      </div>
+      <div class="kuai" data-brief="使用百分比">
+        <div class="ershiliu model2"></div>
       </div>
     </div>
 
