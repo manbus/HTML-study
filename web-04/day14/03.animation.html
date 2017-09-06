@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>动画</title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      /*创建一个动画*/
+      @keyframes run {
+        0% {
+          width: 200px;
+          height: 200px;
+          background: yellow;
+        }
+        50% {
+          width: 100px;
+          height: 100px;
+          background: blue;
+        }
+        100% {
+          width: 200px;
+          height: 200px;
+          background: yellow;
+        }
+      }
+
+      /*
+      在某个元素上应用一个动画
+      */
+      .one {
+        width: 200px;
+        height: 200px;
+        background: yellow;
+        /*animation-duration: 3s;
+        animation-name: run;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;*/
+        animation: run 3s linear infinite;
+      }
+      .one:hover {
+        animation-play-state: paused;/*running*/
+      }
+
+      .two {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: relative;
+        left: 0;
+        animation: move 5s linear infinite, move1 3s linear infinite;
+      }
+      @keyframes move {
+        0% {
+          left: 0px;
+        }
+        50% {
+          left: 500px;
+        }
+        75% {
+          left: 700px;
+        }
+        100% {
+          left: 0px;
+        }
+      }
+
+      @keyframes move1 {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one"></div>
+    <div class="two"></div>
+  </body>
+</html>

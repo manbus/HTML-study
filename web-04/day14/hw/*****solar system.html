@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>太阳系</title>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        background: url("./13-image/img3/bg.jpg");
+        height: 100%;
+      }
+      .box{
+        width: 600px;
+        height: 600px;
+        margin: auto;
+        margin-top: 150px;
+        position: relative;
+        /*background: red;*/
+      }
+      .box div{
+        position: absolute;
+        border-radius: 50%;
+      }
+      .box div:nth-child(1){
+        width: 50px;
+        height: 50px;
+        background: yellow;
+        margin-top: 275px;
+        margin-left: 275px;
+      }
+
+      .box div:nth-child(2){
+        width: 76px;
+        height: 76px;
+        border: 2px solid gray;
+        margin-top: 260px;
+        margin-left: 260px;
+        animation:water 3s infinite linear;
+      }
+      @keyframes water {
+        100%{transform:rotate(360deg)};
+      }
+      .box div:nth-child(2) div{
+        width: 8px;
+        height: 8px;
+        background: yellow;
+        margin: 0;
+        position: absolute;
+        top: 16px;
+      }
+      .box div:nth-child(3){
+        width: 106px;
+        height: 106px;
+        border: 2px solid gray;
+        margin-top: 245px;
+        margin-left: 245px;
+        animation:jin 4s infinite linear;
+      }
+      @keyframes jin {
+        100%{transform:rotate(360deg)};
+      }
+      .box div:nth-child(3) div{
+        width: 12px;
+        height: 12px;
+        background: blue;
+        margin: 0;
+        position: absolute;
+        top: 72px;
+      }
+      .box div:nth-child(4){
+        width: 156px;
+        height: 156px;
+        border: 2px solid gray;
+        margin-top: 220px;
+        margin-left: 220px;
+        animation:earth 5s infinite linear;
+      }
+      @keyframes earth {
+        100%{transform:rotate(360deg)};
+      }
+      .box div:nth-child(4) div{
+        width: 12px;
+        height: 12px;
+        background: green;
+        margin: 0;
+        position: absolute;
+        top: 61px;
+        left:-6px;
+        animation:moon 2s infinite linear;
+      }
+      @keyframes moon {
+        100%{transform:rotate(360deg)};
+
+      }
+
+      #moon{
+        width: 5px;
+        height: 5px;
+        background: purple;
+        margin: 0;
+        position: absolute;
+        top: -7px;
+        left: 0px;
+      }
+      .box div:nth-child(5){
+        width: 216px;
+        height: 216px;
+        border: 2px solid gray;
+        background: url("./13-image/img3/universe.png");
+        background-size: 100%;
+        margin-top: 190px;
+        margin-left: 190px;
+        animation:earth 6s infinite linear;
+      }
+      @keyframes earth {
+        100%{transform:rotate(360deg)};
+      }
+      .box div:nth-child(5) div{
+        width: 14px;
+        height: 14px;
+        background: red;
+        margin: 0;
+        position: absolute;
+        top: 61px;
+        left:0px;
+      }
+      .box div:nth-child(6){
+        width: 276px;
+        height: 276px;
+        border: 2px solid gray;
+        margin-top:160px;
+        margin-left: 160px;
+        animation:earth 8s infinite linear;
+      }
+      @keyframes earth {
+        100%{transform:rotate(360deg)};
+      }
+      .box div:nth-child(6) div{
+        width: 18px;
+        height: 18px;
+        background: white;
+        margin: 0;
+        position: absolute;
+        top: 61px;
+        left:8px;
+      }
+      .box div:nth-child(7){
+        width: 336px;
+        height: 336px;
+        border: 2px solid gray;
+        margin-top:130px;
+        margin-left: 130px;
+        animation:earth 12s infinite linear;
+        /*transform-style: preserve-3d;*/
+      }
+      @keyframes earth {
+        100%{transform:rotate(360deg)};
+      }
+      .box div:nth-child(7) div{
+        width: 22px;
+        height: 22px;
+        background: green;
+        margin: 0;
+        position: absolute;
+        top: 75px;
+        left:8px;
+      }
+      .box div:nth-child(7) #huan{
+        width: 26px;
+        height: 26px;
+        background-color: transparent;
+        margin: 0;
+        border: 2px white solid;
+        box-shadow: 0px 0px 2px 1px white;
+        position: absolute;
+        top: 71px;
+        left:4px;
+        transform: rotateX(180deg);
+      }
+      .box:hover div{
+        animation-play-state: paused;
+      }
+      .box:hover div:nth-child(4) div{
+        animation-play-state: paused;
+
+      }
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <div class="box">
+     <div></div>
+     <div><div></div></div>
+     <div><div></div></div>
+     <div><div><div id="moon"></div></div></div>
+     <div><div></div></div>
+     <div><div></div></div>
+     <div><div></div><div id="huan"></div></div>
+
+
+    </div>
+  </body>
+</html>

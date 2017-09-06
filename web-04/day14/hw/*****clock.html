@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>clock</title>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        height: 100%;
+        background: #f6f6f6;
+      }
+      .clock{
+        width: 384px;
+        height: 384px;
+        border: 8px solid black;
+        border-radius: 50%;
+        margin: auto;
+        margin-top: 150px;
+        position: relative;
+      }
+      .one{
+        width: 8px;
+        height: 384px;
+        background: black;
+        position: absolute;
+        left: 188px;
+      }
+      .two{
+        width: 384px;
+        height: 8px;
+        background: black;
+        position: absolute;
+        top: 188px;
+      }
+      .three{
+        width: 4px;
+        height: 384px;
+        background: black;
+        position: absolute;
+        left: 190px;
+        right: 0px;
+        transform: rotate(30deg);
+      }
+      .four{
+        width: 4px;
+        height: 384px;
+        background: black;
+        position: absolute;
+        left: 190px;
+        right: 0px;
+        transform: rotate(60deg);
+      }
+      .five{
+        width: 4px;
+        height: 384px;
+        background: black;
+        position: absolute;
+        left: 190px;
+        right: 0px;
+        transform: rotate(120deg);
+      }
+      .six{
+        width: 4px;
+        height: 384px;
+        background: black;
+        position: absolute;
+        left: 190px;
+        right: 0px;
+        transform: rotate(150deg);
+      }
+      .round{
+        width: 320px;
+        height: 320px;
+        background: #f6f6f6;
+        border-radius: 50%;
+        position: absolute;
+        top: 32px;
+        left: 32px;
+      }
+      .shi{
+        width: 8px;
+        height: 96px;
+        background: black;
+        position: absolute;
+        top: 96px;
+        left: 188px;
+        transform-origin: bottom;
+        animation: zhuan 216000s infinite linear;
+
+      }
+      .fen{
+        width: 4px;
+        height: 144px;
+        background: black;
+        position: absolute;
+        top: 48px;
+        left: 190px;
+        transform-origin: bottom;
+        animation: zhuan 3600s infinite linear;
+      }
+
+      .miao{
+        width: 2px;
+        height: 168px;
+        background: red;
+        position: absolute;
+        top: 24px;
+        left: 191px;
+        transform-origin: bottom;
+        animation: zhuan  60s steps(60) infinite ;
+      }
+      .dot{
+        width: 50px;
+        height: 50px;
+        background: black;
+        position: absolute;
+        top: 167px;
+        left: 167px;
+        border-radius: 50%;
+      }
+      @keyframes zhuan {
+        100%{transform: rotate(360deg);}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+      <div class="four"></div>
+      <div class="five"></div>
+      <div class="six"></div>
+      <div class="round"></div>
+      <div class="shi"></div>
+      <div class="fen"></div>
+      <div class="miao"></div>
+      <div class="dot"></div>
+
+
+    </div>
+
+  </body>
+</html>

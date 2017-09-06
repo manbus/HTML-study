@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>car</title>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .car {
+        width: 200px;
+        height: 82px;
+        position: absolute;
+        top: 500px;
+        left: 50px;
+        background: url("./image/car.jpg");
+        background-size: cover;
+        animation: 3s linear infinite car;
+      }
+      @keyframes car {
+        10% {
+          transform: translateX(90px) skewX(45deg) ;
+        }
+        35% {
+          transform: translateX(220px) skewX(0deg) ;
+        }
+        75% {
+          transform: translateX(750px);
+        }
+        90% {
+          transform: translateX(810px) skewX(-45deg);
+        }
+        100% {
+          transform: translateX(850px) skewX(0deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="car">
+      <!-- <img src="./image/car.jpg" alt=""> -->
+    </div>
+
+  </body>
+</html>
