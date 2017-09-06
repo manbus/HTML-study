@@ -1,0 +1,16 @@
+$bigFont: 50px;
+$color:yellow;
+
+.one {
+  font-size: $bigFont;
+}
+.two {
+  color: $color;
+  font-size: $bigFont;
+}
+.three {
+  background: red;
+  &:hover {
+    background: blue;
+  }
+}

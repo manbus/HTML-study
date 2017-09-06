@@ -1,0 +1,17 @@
+.one {
+  color: red;
+  font-size: 40px;
+  width: 100px;
+  height: 100px;
+  box-shadow: 2px 2px 1px red, 3px 3px 2px yellow, 4px 4px 0px blue; }
+
+.two {
+  opacity: 0.55;
+  line-height: 50px;
+  text-align: center; }
+
+.three {
+  color: blue;
+  font-size: 20px; }
+
+/*# sourceMappingURL=05.mixin.css.map */

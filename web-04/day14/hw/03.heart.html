@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>heart</title>
+    <style media="screen">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: #ffa5a5;
+      }
+      .heart-box {
+        margin: 100px auto;
+        width: 300px;
+        height: 300px;
+        position: relative;
+        /*border: 1px solid pink;*/
+        animation: 2s linear heart infinite;
+      }
+      .heart-box .box1:nth-child(2) {
+        position: relative;
+        left: -30px;
+      }
+      .box1 {
+        width: 150px;
+        height: 150px;
+        float: left;
+        border-radius: 50%;
+        background: pink;
+        box-sizing: border-box;
+      }
+      .box2{
+        width: 150px;
+        height: 150px;
+        background: pink;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 60px;
+        left: 60px;
+      }
+      @keyframes heart {
+        50% {
+          transform: scale(1.5,1.5);
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="heart-box">
+      <div class="box1"></div>
+      <div class="box1"></div>
+      <div class="box2"></div>
+    </div>
+
+  </body>
+</html>

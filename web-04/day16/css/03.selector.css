@@ -1,0 +1,21 @@
+@charset "UTF-8";
+.one {
+  color: yellow;
+  height: 200px;
+  line-height: 200px; }
+  .one .one_1 {
+    font-size: 50px;
+    color: green; }
+    .one .one_1 .one_1_2 {
+      background: red; }
+    .one .one_1::before {
+      content: "before_1....."; }
+  .one::after {
+    content: "after。。。"; }
+
+.two div {
+  color: green; }
+.two > div {
+  font-size: 100px; }
+
+/*# sourceMappingURL=03.selector.css.map */
