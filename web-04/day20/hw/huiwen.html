@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>回文数组</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    function huiWen(){
+      if(arr.length % 2!=0){
+        return "不是回文数组";
+      }
+      else{
+        for(var i = 0;i<arr.length/2;i++){
+          // console.log(arr.reverse());
+          for(var j=0;j<arr.length/2;j++)
+          // for(var j=0;;j++)
+            var res=arr.reverse()[j]
+            result=res.split("").reverse().join("");
+            // console.log(result);
+          }
+          // console.log(arr);
+          // console.log(i);
+          // console.log(arr[i]);
+          if(arr[i]==result){
+            return "是回文数组";
+          }
+          else{
+            return "不是回文数组";
+          }
+      }
+    };
+    var arr=["hello","world","dlow","olleh"];
+    console.log(huiWen(arr));
+    // var a4 = ['h', 'e', 'l', 'l', 'o'];
+    // console.log(a4.reverse());
+    // console.log(a4);
+    </script>
+  </body>
+</html>

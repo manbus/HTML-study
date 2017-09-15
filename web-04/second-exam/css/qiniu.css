@@ -170,6 +170,16 @@ nav.navbar:hover {
     margin-bottom: 20px;
     text-align: center;
     font-weight: 300; }
+  .features .desc {
+    text-align: center; }
+  .features p {
+    line-height: 28px;
+    color: #888; }
+    .features p a {
+      color: #888;
+      margin-right: 10px; }
+    .features p a:hover {
+      color: #28aedf; }
   .features .row .col-sm-6 {
     margin-bottom: 25px; }
     .features .row .col-sm-6 .media {
@@ -202,5 +212,14 @@ nav.navbar:hover {
             color: #888; }
           .features .row .col-sm-6 .media .media-body p a:hover {
             color: #28aedf; }
+  .features .row .thumbnail {
+    border: none;
+    background: transparent;
+    min-height: 235px;
+    margin-bottom: 0;
+    display: block;
+    padding: 4px;
+    transition: border 0.2s ease-in-out;
+    line-height: 1.42857143; }
 
 /*# sourceMappingURL=qiniu.css.map */

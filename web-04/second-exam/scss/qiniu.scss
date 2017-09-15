@@ -217,6 +217,20 @@ nav.navbar:hover {
     text-align: center;
     font-weight: 300;
   }
+  .desc {
+    text-align: center;
+  }
+  p {
+    line-height: 28px;
+    color: #888;
+    a {
+      color: #888;
+      margin-right: 10px;
+    }
+    a:hover{
+      color: #28aedf;
+    }
+  }
   .row {
     .col-sm-6 {
       margin-bottom: 25px;
@@ -258,6 +272,16 @@ nav.navbar:hover {
           }
         }
       }
+    }
+    .thumbnail {
+      border: none;
+      background: transparent;
+      min-height: 235px;
+      margin-bottom: 0;
+      display: block;
+      padding: 4px;
+      transition: border 0.2s ease-in-out;
+      line-height: 1.42857143;
     }
   }
 }
