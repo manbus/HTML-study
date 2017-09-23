@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button id="btn">点击变换一种颜色</button>
+    <h1 id="yan"><span>helooworld</span></h1>
+    <script type="text/javascript">
+      var btn = document.getElementById("btn");
+      var span = document.getElementById("yan").firstElementChild;
+      btn.onclick = function(){
+        span.style.color = "rgb("+product()+")";
+        console.log(product());
+      }
+      function product(){
+        var str = [];
+        for(var i=0;i<3;i++){
+          temp=Math.floor(Math.random() * 255);
+          str.push(temp);
+        }
+        newStr = str.join();
+        console.log(newStr);
+        return newStr;
+      }
+
+    </script>
+  </body>
+</html>

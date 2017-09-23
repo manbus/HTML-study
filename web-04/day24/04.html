@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>字符串</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    var str1 = 'helloworld中国人';
+    var str2 = new String("worldhello");
+
+    console.log(str1);
+    console.log(str2);
+
+    //charAt();
+    console.log(str1.charAt(0));//h
+    console.log(str1[0]);//h
+
+    str1[0] = "H";//无效,字符串不变
+    console.log("str1.length = ",str1.length);
+    console.log("str1 = ",str1);
+
+    //可遍历
+    for (var i = 0; i < str1.length; i++) {
+      console.log(str1[i]);
+    }
+
+    //charCodeAt,得到字符的编码
+    console.log(str1.charCodeAt(10));//
+    console.log(str1.charCodeAt(0));//
+
+    //fromCharCode()将编码转为字符
+    console.log(String.fromCharCode(97,98,99,100,101,102));
+
+    //indexOf('name',num)子串查找,严格区分大小写
+    // name表示查找的子串 num表示从第几位开始查找 返回 -1 表示没有
+    var str2 = "android apple Iphone mac iphone";
+    console.log(str2.indexOf('Iphone',20));//返回出现的位置
+
+    //slice切片,参数和数组一样
+    var str3 = "asldkfnlaksdnf nkljasdnfliawejflij";
+    console.log(str3.slice(0,10));
+    console.log(str3.slice(-20,20));
+
+    //substr,按照指定长度去切片
+    console.log(str3.substr(10,20));
+
+    //substring start > end 的情况下,它会调换参数顺序
+    console.log(str3.slice(10,0));
+    console.log(str3.substring(10,0));
+
+    //大小写转换
+    console.log("HELLOWORLDlkasdjflkasn".toLowerCase());
+    console.log("sdlkfjldskjfLKJLBKHB".toUpperCase());
+
+    //split("XX",num) 字符串切割
+    //num表示切割的数目
+    var str4 = "hello  world  google  apple";
+    console.log(str4.split('  ',2));
+
+    
+
+    </script>
+
+  </body>
+</html>

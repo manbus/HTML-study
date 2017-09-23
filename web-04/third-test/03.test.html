@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      /*
+      @num 传入判断的数字
+      @fun() 打包判断是否为二的n次方的函数
+      */
+
+      function fun(num){
+        var i = 3;
+        while (i >= 2) {
+          i =  num % 2;
+          // console.log(i);
+        };
+        if (i == 1) {
+          alert('不是2的N次方数')
+        } else if (i == 0) {
+          alert('是2的N次方数')
+        } else {
+          alert('请输入整数')
+        }
+      };
+
+      fun(32);
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>闭包</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+    /*
+    闭包的缺点:
+    1.闭包常量常驻内存,增加内存消耗
+    */
+
+    function fun(){
+      var a = [];
+
+      for (var i = 0; i < 5; i++){
+        a[i] = function(){
+          console.log("我是:",i);
+        };
+      }
+      return a;
+    }
+
+    var result = fun();
+    result[0]();
+    result[1]();
+    result[2]();
+    result[3]();
+    result[4]();
+
+
+
+    </script>
+
+  </body>
+</html>

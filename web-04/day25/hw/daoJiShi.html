@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .box{
+        width: 600px;
+        height: 100px;
+        margin: 100px auto;
+        background: orange;
+        line-height: 100px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1"class="box">
+      <h1>距离抢购时间还剩<span>51</span>天<span>18</span>时<span>54</span>分<span>21</span>秒</h1>
+    </div>
+    <script type="text/javascript">
+      var box1 = document.getElementById("box1");
+      var day = box1.getElementsByTagName("span")[0];
+      var hour = box1.getElementsByTagName("span")[1];
+      var minute = box1.getElementsByTagName("span")[2];
+      var sec = box1.getElementsByTagName("span")[3];
+      var date = new Date();
+
+      var count2 =;
+      var count3 =hour.innerHTML;
+      var count4 =day.innerHTML;
+      // console.log(sec.innerHTML);
+      var timer1 = setInterval(function(){
+        count1--;
+        sec.innerHTML = count1;
+
+        if (count1 == 0){
+          count1 = 60;
+          count2--;
+          minute.innerHTML = count2;
+        }
+        if(count2==0){
+          count2=60;
+          count3--;
+          hour.innerHTML = count3;
+        }
+        if(count3==0){
+          count3=24;
+          count4--;
+          day.innerHTML = count4;
+        }
+        if(count4==0&&count3==0&&count2==0&&count0==0){
+          clearInterval(timer1);
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

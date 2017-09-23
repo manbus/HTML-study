@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      .clock{
+        width: 600px;
+        height: 600px;
+        margin: 100px auto;
+        overflow: hidden;
+        position: relative;
+      }
+      .clock img.biaoPan{
+        width: 100%;
+        height: 100%;
+
+      }
+      /*@keyframes run1 {
+        0% {
+          transform: rotateZ(0deg);
+        }
+
+        50% {
+          transform: rotateZ(180deg);
+
+        }
+
+        100% {
+          transform: rotateZ(360deg);
+
+        }
+      }*/
+      .clock img.hour{
+        position: absolute;
+        top: 0;
+        left: 285px;
+        transition: all 0s linear;
+        /*animation: run1 5646416341s linear infinite;*/
+      }
+
+      .clock img.minute{
+        position: absolute;
+        top: 0;
+        left: 285px;
+        transition: all 0s linear;
+        /*animation: run1 54646s linear infinite;*/
+
+      }
+      .clock img.second{
+        position: absolute;
+        top: 0;
+        left: 285px;
+        transition: all 0s linear;
+        /*animation: run1 60s linear infinite;*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <img class="biaoPan"src="./clock.jpg" alt="">
+      <img class="hour"src="./hour.png" alt="">
+      <img class="minute"src="./minute.png" alt="">
+      <img class="second"src="./second.png" alt="">
+    </div>
+    <script type="text/javascript">
+      var d = new Date();
+      console.log("时 : ", d.getHours());
+      console.log("分 : ", d.getMinutes());
+      console.log("秒 : ", d.getSeconds());
+      var hour = document.getElementsByClassName("hour")[0];
+      var minute = document.getElementsByClassName("minute")[0];
+      var second = document.getElementsByClassName("second")[0];
+      // console.log(second);
+      console.log((d.getSeconds())*6+"deg");
+      console.log((d.getMinutes())*6+"deg");
+      if((d.getHours())>=12){
+        console.log((d.getHours()-12)*36+"deg");
+      }else{
+        console.log((d.getHours())*6+"deg");
+      }
+      second.style.transform = "rotateZ("+(d.getSeconds())*6+"deg)";
+      minute.style.transform = "rotateZ("+(d.getMinutes())*6+"deg)";
+      if((d.getHours())>=12){
+        hour.style.transform = "rotateZ("+(d.getHours()-12)*36+"deg)";
+      }else{
+        hour.style.transform = "rotateZ("+(d.getHours())*36+"deg)";
+      }
+      var sec = (d.getSeconds())*6;
+      var min = (d.getMinutes())*6;
+      if((d.getHours())>=12){
+        var hou =(d.getHours()-12)*30;
+      }else{
+        var hou=(d.getHours())*30;
+      }
+      console.log(hou);
+      var timer1 = setInterval(function(){
+        second.style.transform = "rotateZ("+sec+"deg)";
+        sec+=6;
+        if(sec==360){
+          sec=0;
+          minute.style.transform = "rotateZ("+min+"deg)";
+          min+=6;
+          // console.log(min);
+        }
+        if(min==360){
+          min=0;
+          hour.style.transform = "rotateZ("+hou+"deg)";
+          hou+=30;
+          console.log(hou);
+        }
+      }, 1000);
+
+    </script>
+  </body>
+</html>

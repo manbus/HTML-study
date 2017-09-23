@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+    function Student(name,age,score){
+      this.name = name;
+      this.age = age;
+      this.score = score;
+    }
+    /*
+    原型,只要是个函数,都有一个属性叫做prototype,并且prototype也是个对象
+    函数也是对象
+    */
+    // console.log(Student.prototype.constructor === Student);
+
+    //添加在prototype上的属性和方法,是所有该构造函数产生的对象所共有的!!!
+    Student.prototype.exam = function(){
+      console.log('明天要考试了');
+    };
+
+    var one = new Student('lisi',20,88);
+    var two = new Student('zhangsan',26,89);
+
+    one.exam();
+    two.exam();
+
+    console.log(one,two);
+
+    one.exam = function(){
+      console.log('我明天不考试');
+    };
+
+    one.exam();
+    two.exam();
+
+    </script>
+
+  </body>
+</html>

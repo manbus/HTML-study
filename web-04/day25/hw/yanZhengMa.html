@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>yanZhengMa</title>
+  </head>
+  <body>
+    <button id="btn">点击产生验证码</button>
+    <h1 id="yan">输出:<span></span></h1>
+    <script type="text/javascript">
+      var btn = document.getElementById("btn");
+      var span = document.getElementById("yan").firstElementChild;
+      btn.onclick = function(){
+        span.innerHTML = product()
+      }
+      function product(){
+        var newStr = "";
+        for (var i = 0; i < 6; i++) {
+         temp=Math.floor(Math.random() * 123);
+         if(temp<10){
+           newStr+=temp;
+         }else if (temp>=10&&temp<65) {
+           i--;
+           continue;
+         }
+         else if (temp>=91&&temp<97) {
+           i--;
+           continue;
+         }
+         else{
+           newStr+=String.fromCharCode(temp);
+         }
+        }
+        return newStr;
+      }
+
+    </script>
+  </body>
+</html>

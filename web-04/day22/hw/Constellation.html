@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Constellation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .big {
+      width: 300px;
+      height: 300px;
+      border: 1px solid gray;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .clearfix::before {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .title {
+      margin: 30px 0 20px;
+      position: relative;
+      height: 90px;
+    }
+    .left {
+      position: relative;
+    }
+
+    .left p {
+      position: absolute;
+      top: -5px;
+      left: 25px;
+      width: 100px;
+      height:50px;
+      background: url("./xingzuo/Icon.png")no-repeat;
+    }
+    .left p{
+      background-position: 0 0 ;
+    }
+    .right {
+      position: absolute;
+      top: 0;
+      right: 38px;
+    }
+    .right .concrete {
+      position: relative;
+    }
+    .right .concrete li {
+      list-style: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .content {
+      font-size: 14px;
+      line-height: 30px;
+      text-indent: 2em;
+    }
+    .evaluate{
+      width: 80px;
+      height: 20px;
+      background: url("./xingzuo/yunshi.png");
+      background-position: 0 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .evaluate img{
+      position: absolute;
+      top:-27px;
+      right: 0px;
+    }
+  </style>
+  <link rel="stylesheet" href="./bootstrap/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="./bootstrap/font-awesome/css/font-awesome.min.css"> -->
+</head>
+
+<body>
+  <div class="big">
+    <h3 class="text-center">十二星座</h3>
+    <div class="title clearfix">
+      <div class="left">
+        <p id="icon"></p>
+      </div>
+      <div class="right">
+        <div id="">
+          <select name="" id="select">
+            <option value="">白羊座</option>
+            <option value="">巨蟹座</option>
+            <option value="">双鱼座</option>
+            <option value="">天蝎座</option>
+            <option value="">摩羯座</option>
+            <option value="">双子座</option>
+            <option value="">射手座</option>
+            <option value="">水瓶座</option>
+            <option value="">处女座</option>
+          </select>
+        </div>
+        <div class="evaluate">
+          <img id="col" src="./xingzuo/yunshi.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div id="content" class="text-center">
+
+    </div>
+  </div>
+  <script type="text/javascript">
+        var col = document.getElementById("col");
+        var icon = document.getElementById("icon");
+        var select = document.getElementById("select");
+        var _Option = select.getElementsByTagName("option")
+        var jinNiu = document.createElement("div")
+        var content = document.getElementById("content");
+        jinNiu.innerHTML="白羊座的优点是当机立断，付之行动和速战速";
+        content.insertBefore(jinNiu,null);
+        _Option[1].addEventListener("click",function(){
+          jinNiu.innerHTML="巨蟹座的优点是当机立断，付之行动和速战速";
+          content.insertBefore(jinNiu,null);
+          icon.style.cssText = "background-position:0 -50px";
+          col.style.cssText = "right:16px"
+        },false)
+        _Option[2].addEventListener("click",function(){
+          jinNiu.innerHTML="双鱼座的优点是当机立断，付之行动和速战速";
+          // console.log(jinNiu.innerHTML);
+          content.insertBefore(jinNiu,null);
+          icon.style.cssText = "background-position:0 -97px";
+          col.style.cssText = "right:16px"
+        },false)
+        _Option[3].addEventListener("click",function(){
+          jinNiu.innerHTML="天蝎座的优点是当机立断，付之行动和速战速";
+          // console.log(jinNiu.innerHTML);
+          content.insertBefore(jinNiu,null);
+          icon.style.cssText = "background-position:0 -147px";
+          col.style.cssText = "right:16px"
+        },false)
+        _Option[4].addEventListener("click",function(){
+          jinNiu.innerHTML="摩羯座的优点是当机立断，付之行动和速战速";
+          // console.log(jinNiu.innerHTML);
+          content.insertBefore(jinNiu,null);
+          icon.style.cssText = "background-position:0 -200px";
+          col.style.cssText = "right:16px"
+        },false)
+        _Option[5].addEventListener("click",function(){
+          jinNiu.innerHTML="双子座的优点是当机立断，付之行动和速战速";
+          // console.log(jinNiu.innerHTML);
+          content.insertBefore(jinNiu,null);
+          icon.style.cssText = "background-position:0 -250px";
+          col.style.cssText = "right:32px"
+        },false)
+        _Option[6].addEventListener("click",function(){
+          jinNiu.innerHTML="射手座的优点是当机立断，付之行动和速战速";
+          // console.log(jinNiu.innerHTML);
+          content.insertBefore(jinNiu,null);
+          icon.style.cssText = "background-position:0 -300px";
+          col.style.cssText = "right:32px"
+        },false)
+        _Option[7].addEventListener("click",function(){
+          jinNiu.innerHTML="水瓶座的优点是当机立断，付之行动和速战速";
+          // console.log(jinNiu.innerHTML);
+          content.insertBefore(jinNiu,null);
+          icon.style.cssText = "background-position:0 -350px";
+          col.style.cssText = "right:32px"
+        },false)
+        _Option[8].addEventListener("click",function(){
+          jinNiu.innerHTML="处女座的优点是当机立断，付之行动和速战速";
+          // console.log(jinNiu.innerHTML);
+          content.insertBefore(jinNiu,null);
+          icon.style.cssText = "background-position:0 -400px";
+          col.style.cssText = "right:32px"
+        },false)
+  </script>
+</body>
+
+</html>
