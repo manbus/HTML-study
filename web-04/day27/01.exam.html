@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>考试</title>
+  </head>
+  <body>
+
+    <script>
+
+      //判断一个数是否是2的n次方
+      function is2Pow(num){
+        return (num > 0) && ((num & num - 1) === 0);
+      }
+
+      //使用两个栈，实现先进先出的队列
+      (function(){
+        var src = [],dest = [];
+
+        function enqueue(value){
+          src.push(value);
+          // console.log(src);
+        }
+
+        function dequeue(){
+          while (src.length){
+            dest.push(src.pop());
+          }
+
+          return dest.pop();
+        }
+
+        enqueue(1);
+        enqueue(2);
+        enqueue(3);
+        enqueue(4);
+
+        dequeue();
+        console.log(dest);
+        console.log(dequeue());
+        console.log(dequeue());
+        console.log(dest);
+      })();
+
+      //递归：必须要有结束条件
+      //求 num 的阶乘
+      function factorial(num){
+        if (num === 1){
+          return 1;
+        } else {
+          return num * factorial(num - 1);
+        }
+      }
+
+      console.log( factorial(5) );
+
+
+
+      //判断一个函数是否是普通对象
+      console.log("*******判断是否普通对象******");
+      function isPlainObject(o){
+        return Object.prototype.toString.call(o) === '[object Object]'
+      }
+      obj = new Object;
+      console.log(obj);
+      console.log( obj.toString());
+      console.log( isPlainObject(obj));
+
+      /*
+      深度克隆，Array,Object
+      @obj,可能是任意一种数据类型
+      */
+
+      // {name:'lisi',age:22,hobby:[""]}
+      function deepCopy(obj){
+        var o;  //o是返回的克隆之后的数据
+
+        //Array or Object
+        if (typeof obj === 'object'){
+
+          //普通对象
+          if (isPlainObject(obj)){
+            o = {};
+            for (var key in obj){
+              o[key] = deepCopy(obj[key]);
+            }
+            return o;
+          } else {
+            o = [];
+            for (var i = 0; i < obj.length ; i++){
+              o[i] = deepCopy(obj[i]);
+            }
+            return o;
+          }
+        } else {
+          return obj;
+        }
+      }
+
+      var stu = {name:'lisi',age:22,hobby:["one","two",{three:[1,2,3]}]};
+      var result = deepCopy(stu);
+      console.log(result);
+
+      result.hobby[2].three.push(4);
+      console.log("result = ",result);
+      console.log("stu = ",stu);
+
+    </script>
+
+  </body>
+</html>
