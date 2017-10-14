@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>offset相关的</title>
+    <style media="screen">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      .f{
+        width: 600px;
+        height: 300px;
+        margin: 50px auto;
+        border: 10px solid green;
+        padding: 10px;
+        position: absolute;
+      }
+
+      #box{
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+        border: 10px solid red;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="f">
+      <div id="box"></div>
+    </div>
+
+    <script src="./jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+      console.log("******************jQuery****************");
+      console.log($(window).width());
+      console.log($(document).width());
+
+      //获取 内容 width
+      console.log($("#box").width());//200
+
+      //获取 width + padding
+      console.log($('#box').innerWidth());  //240
+
+      //
+    </script>
+
+  </body>
+</html>
