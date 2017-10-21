@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>deepCopy</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+    function deepCopy(obj){
+      var o;  //o是返回的克隆之后的数据
+      function isPlainObject(o){
+        return Object.prototype.toString.call(o) === '[object Object]'
+      }
+
+      if (typeof obj === 'object'){
+
+        if (isPlainObject(obj)){
+          o = {};
+          for (var key in obj){
+            o[key] = deepCopy(obj[key]);
+          }
+          return o;
+        } else {
+          o = [];
+          for (var i = 0; i < obj.length ; i++){
+            o[i] = deepCopy(obj[i]);
+          }
+          return o;
+        }
+      } else {
+        return obj;
+      }
+    };
+      var obj1 = {name:'wangwu',age:22,hobby:["eat","drink",{sport:["swim","run","basketball"]}]};
+      var obj2 = deepCopy(obj1);
+      console.log('obj1 = ',obj1);
+      console.log('obj2 = ',obj2);
+    </script>
+
+  </body>
+</html>

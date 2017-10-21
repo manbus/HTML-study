@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div>
+       <img src="./images/1.jpg" alt=""/>
+       <img src="p.png" alt="" data-url="./images/2.png"/>
+       <img src="p.png" alt="" data-url="./images/3.jpg"/>
+       <img src="p.png" alt="" data-url="./images/4.jpg"/>
+       <img src="p.png" alt="" data-url="./images/5.jpg"/>
+       <img src="p.png" alt="" data-url="./images/6.jpg"/>
+       <img src="p.png" alt="" data-url="./images/zhaosi.jpg"/>
+    </div>
+    <script type="text/javascript">
+      window.onload=function () {
+        var windowH,//可视区高度
+            imgs,
+            imgTop,
+            dataUrl,
+            scTop;//滚动条高度
+       windowH=document.documentElement.clientHeight;
+       imgs=document.getElementsByTagName('img');
+        window.onscroll= function () {
+           scTop=document.documentElement.scrollTop || document.body.scrollTop;
+            for(var i=0;i<imgs.length;i++){
+                imgTop=imgs[i].offsetTop;//图片距离顶部高度
+                if(imgTop-windowH<scTop &&imgTop-windowH>0 && imgs[i].getAttribute("data-url")!=imgs[i].getAttribute("src")){
+                       dataUrl=imgs[i].getAttribute("data-url");
+                       imgs[i].setAttribute("src",dataUrl);
+                  }
+              }
+          }
+      }
+    </script>
+
+
+  </body>
+</html>
