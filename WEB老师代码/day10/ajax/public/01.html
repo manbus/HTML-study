@@ -72,7 +72,7 @@
           if ((xhr.status >= 200) && (xhr.status < 400)){
 
             //通过xhr.response得到后端发送来的数据
-            console.log("recv from server: ", xhr.response);
+            console.log("recv from server: " + xhr.response);
 
             $("<h1>success</h1>").appendTo("body");
           } else {

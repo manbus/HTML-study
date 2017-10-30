@@ -30,6 +30,7 @@
     .s {
       width: 100px;
       height: 258px;
+      border: 1px solid red;
       background: url("./yellow-line.png");
       position: absolute;
       left: 0;
@@ -39,6 +40,7 @@
 </head>
 
 <body>
+  <button id="stop">stop</button>
 
   <div class="box">
     <div class="f">
@@ -47,16 +49,21 @@
   </div>
 
 
-  <script src="./jquery-3.0.0.min.js" charset="utf-8"></script>
+
   <script type="text/javascript">
     var elem = document.querySelector('#sid');
 
-    /*
+    var timer;
+
+    document.getElementById('stop').onclick = function () {
+      clearInterval(timer);
+    }
+
     //使用定时器运行
     function move() {
       var styles = window.getComputedStyle(elem);
 
-      setInterval(function() {
+      timer = setInterval(function() {
         elem.style.left = elem.offsetLeft + 20 + 'px';
         elem.style.backgroundPosition = -elem.offsetLeft + "px 0";
 
@@ -66,27 +73,27 @@
         }
       }, 100);
     }
-    */
+
+    move();
 
 
-
-
-    function handler() {
-      elem.style.left = elem.offsetLeft + 20 + 'px';
-      elem.style.backgroundPosition = -elem.offsetLeft + "px 0";
-
-      if (elem.offsetLeft >= window.innerWidth - elem.offsetWidth) {
-        elem.style.left = '0px';
-        elem.style.backgroundPosition = "0px 0px";
-      }
-
-      setTimeout(() => {
-        window.requestAnimationFrame(handler);
-      }, 50);
-    }
-
-    //使用requestAnimationFrame运行动画
-    window.requestAnimationFrame(handler);
+    //
+    // function handler() {
+    //   elem.style.left = elem.offsetLeft + 20 + 'px';
+    //   elem.style.backgroundPosition = -elem.offsetLeft + "px 0";
+    //
+    //   if (elem.offsetLeft >= window.innerWidth - elem.offsetWidth) {
+    //     elem.style.left = '0px';
+    //     elem.style.backgroundPosition = "0px 0px";
+    //   }
+    //
+    //   setTimeout(() => {
+    //     window.requestAnimationFrame(handler);
+    //   }, 50);
+    // }
+    //
+    // //使用requestAnimationFrame运行动画
+    // window.requestAnimationFrame(handler);
   </script>
 </body>
 

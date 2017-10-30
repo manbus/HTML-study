@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
   <head>
@@ -34,40 +33,3 @@
 
   </body>
 </html>
-=======
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-
-    <div class="btn">
-      <button>添加</button>
-      <button>删除</button>
-    </div>
-
-    <ul id="lists"></ul>
-
-    <script src="../jquery.min.js" charset="utf-8"></script>
-    <script type="text/javascript">
-
-    var add = $(".btn button").eq(0);
-    var del = $(".btn button").eq(1);
-    var lists = $("#lists");
-
-    add.click(function(){
-      $("<li>li元素</li>").appendTo("#lists");
-    });
-
-    del.click(function(){
-      $("#lists li:first").remove();
-    });
-
-    </script>
-
-
-  </body>
-</html>
->>>>>>> d8a67f94daba3c4a80bf7e9afef5fdf5b8374cff
