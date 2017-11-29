@@ -48,7 +48,34 @@
       //获取 width + padding
       console.log($('#box').innerWidth());  //240
 
-      //
+      //获取 width + padding + border
+      console.log($('#box').outerWidth());//260
+
+      console.log("******************原生js*****************");
+      var box = document.getElementById('box');
+
+      //获取 width + padding + border
+      console.log(box.offsetWidth);//260,只读属性
+
+      //获取 width + padding
+      console.log(box.clientWidth);//240,只读属性
+
+      //获取width
+      var styles = window.getComputedStyle(box);
+      console.log(parseInt(styles.width));
+      console.log(styles.border);
+
+
+
+      console.log("*********************位置有关系******************");
+      //一个元素和最近的设置过定位(不是static)的祖先元素之间的距离
+      //offsetLeft，offsetTop只读
+      console.log("box.offsetLeft = ",box.offsetLeft);
+      console.log("box.offsetTop = ",box.offsetTop);
+
+      box.style.left = '100px';//设置完毕之后，offsetLeft也就变了
+      box.style.top = '100px';//设置完毕之后，offsetTop也就变了
+      console.log("box.offsetParent = ",box.offsetParent);
     </script>
 
   </body>

@@ -41,6 +41,7 @@
     clearInterval(timer);
     timer = setInterval(function(){
       box.style.left = box.offsetLeft  + 50 + "px";
+      console.log("111");
 
       if (box.offsetLeft > 1600) {
         clearInterval(timer);
@@ -54,6 +55,7 @@
     clearInterval(timer);
     timer = setInterval(function(){
       box.style.left = box.offsetLeft  - 50 + "px";
+      console.log("222");
       if (box.offsetLeft <= 0) {
         clearInterval(timer);
       }
