@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      #target {
+        height: 300px;
+        line-height: 300px;
+        text-align: center;
+        font-size: 50px;
+        border: 2px dotted gray;
+      }
+    </style>
+  </head>
+  <body>
+
+    <dvi id="target">将文件拖拽到此处</dvi>
+
+    <script type="text/javascript">
+      var target = document.getElementById("target");
+
+      target.addEventListener("dragover",function(event){
+        event.stopPropagation();
+        event.preventDefault();
+      },false);
+
+      target.addEventListener("drop",function(event){
+        event.stopPropagation();
+        event.preventDefault();
+
+        //获得文件的信息
+        console.log(event.dataTransfer.files);
+      },false);
+    </script>
+
+  </body>
+</html>
