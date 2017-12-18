@@ -7,6 +7,7 @@ http.createServer(function(req, res){
 
 	//从前端url请求中截取？后边的数据
 	 var queryObj = url.parse(req.url, true).query;
+
 	 /*
 	    queryObj = {"callback": "handler"}
 	 */
@@ -15,6 +16,7 @@ http.createServer(function(req, res){
 
 	 fs.readFile("./test.json", function(err, data){
 		 res.write(queryObj.callback + "(" + data  + ")");// "handler({'name':'lisi', 'age':10})"
+		 console.log(queryObj.callback + "(" + data + ")");
 		 res.end();
 	 });
 

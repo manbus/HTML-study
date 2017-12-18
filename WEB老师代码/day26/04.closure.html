@@ -19,9 +19,17 @@
       var a = [];
 
       for (var i = 0; i < 5; i++) {
-          a[i] = function() {
-            console.log("我是: ", i);
-          };
+          // a[i] = function() {
+          //   console.log("我是: ", i);
+          // };
+
+          a.push(
+            (function(i){
+              return function(){
+                console.log("我是:",i);
+              };
+            })(i)
+          )
       }
 
       return a;
